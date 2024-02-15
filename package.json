@@ -3,7 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/vue-components.umd.cjs",
   "module": "./dist/vue-components.js",
   "exports": {
@@ -12,7 +14,10 @@
       "require": "./dist/vue-components.umd.cjs"
     }
   },
-
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valkyr97/vue-components.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
