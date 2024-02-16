@@ -147,6 +147,9 @@ devDependencies:
   vite:
     specifier: ^5.1.0
     version: 5.1.2
+  vite-plugin-css-injected-by-js:
+    specifier: ^3.4.0
+    version: 3.4.0(vite@5.1.2)
   vite-plugin-dts:
     specifier: ^3.7.2
     version: 3.7.2(typescript@5.3.3)(vite@5.1.2)
@@ -7978,6 +7981,14 @@ packages:
   /vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /vite-plugin-css-injected-by-js@3.4.0(vite@5.1.2):
+    resolution: {integrity: sha512-wS5+UYtJXQ/vNornsqTQxOLBVO/UjXU54ZsYMeX0mj2OrbStMQ4GLgvneVDQGPwyGJcm/ntBPawc2lA7xx+Lpg==}
+    peerDependencies:
+      vite: '>2.0.0-0'
+    dependencies:
+      vite: 5.1.2
     dev: true
 
   /vite-plugin-dts@3.7.2(typescript@5.3.3)(vite@5.1.2):
