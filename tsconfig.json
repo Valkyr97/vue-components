@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist",
+    // "outDir": "dist",
     "target": "ESNext",
-    "emitDeclarationOnly": true,
-    "declaration": true,
+    // "emitDeclarationOnly": true,
+    // "declaration": true,
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -20,7 +20,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "noEmit": false,
+    "noEmit": true,
     "jsx": "preserve",
 
     /* Linting */
