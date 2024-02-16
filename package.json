@@ -1,7 +1,7 @@
 {
   "name": "@valkyr97/vue-components",
   "private": false,
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "files": [
     "dist"
@@ -11,12 +11,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "default": "./dist/vue-components.js"
-      },
-      "require": {
-        "default": "./dist/vue-components.umd.cjs"
-      }
+      "import": "./dist/vue-components.js",
+      "require": "./dist/vue-components.umd.cjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "repository": {
