@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-      - run: pnpm ci
+      - run: pnpm i --frozen-lockfile
 
   publish-gpr:
     needs: build
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: pnpm ci
+      - run: pnpm i --frozen-lockfile
       - run: npm build
       - run: npm publish
         env:
