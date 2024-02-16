@@ -8,6 +8,7 @@
   ],
   "main": "./dist/vue-components.umd.cjs",
   "module": "./dist/vue-components.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-components.js",
@@ -21,7 +22,7 @@
   "packageManager": "pnpm@8.14.1",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build && vue-tsc",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
