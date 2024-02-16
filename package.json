@@ -1,14 +1,14 @@
 {
   "name": "@valkyr97/vue-components",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "files": [
     "dist"
   ],
   "main": "./dist/vue-components.umd.cjs",
   "module": "./dist/vue-components.js",
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vue-components.js",

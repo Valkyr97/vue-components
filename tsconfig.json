@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist/types",
+    "outDir": "dist",
     "target": "ESNext",
     "emitDeclarationOnly": true,
     "declaration": true,
