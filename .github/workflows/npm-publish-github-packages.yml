@@ -34,4 +34,4 @@ jobs:
       - run: pnpm build
       - run: pnpm publish
         env:
-          GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
+          repo-token: ${{secrets.GITHUB_TOKEN}}
