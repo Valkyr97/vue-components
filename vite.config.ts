@@ -6,7 +6,7 @@ import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts({ rollupTypes: true }), cssInjectedByJsPlugin({topExecutionPriority: false})],
+  plugins: [vue(), dts({ rollupTypes: true }), cssInjectedByJsPlugin()],
   resolve: {
     alias: {
       '@/': new URL ('./src/', import.meta.url).pathname
@@ -16,7 +16,7 @@ export default defineConfig({
     postcss: {
       from: resolve(__dirname, 'postcss.config.js'),
       to: resolve(__dirname, 'dist/style.css'),
-      
+
     }
   },
   build: {
