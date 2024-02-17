@@ -10,9 +10,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@/': new URL ('./src/', import.meta.url).pathname
+    },
+  },
+  css: {
+    postcss: {
+      plugins: [],
+      from: resolve(__dirname, 'src/style.css'),
+      to: resolve(__dirname, 'dist/style.css')
     }
   },
-
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
