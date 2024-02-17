@@ -1,7 +1,7 @@
 {
   "name": "@valkyr97/vue-components",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "files": [
     "dist"
@@ -40,9 +40,13 @@
     "@storybook/vue3": "^7.6.15",
     "@storybook/vue3-vite": "^7.6.15",
     "@vitejs/plugin-vue": "^5.0.3",
+    "@vueuse/core": "^10.7.2",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "storybook": "^7.6.15",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.0",
     "vite-plugin-css-injected-by-js": "^3.4.0",
