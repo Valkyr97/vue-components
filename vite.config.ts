@@ -1,37 +1,34 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import {resolve} from 'path'
-import dts from 'vite-plugin-dts'
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import { resolve } from "path";
+import dts from "vite-plugin-dts";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts({ rollupTypes: true }), cssInjectedByJsPlugin()],
+  plugins: [
+    vue(),
+    dts({ rollupTypes: true }),
+    cssInjectedByJsPlugin({ topExecutionPriority: false }),
+  ],
   resolve: {
     alias: {
-      '@/': new URL ('./src/', import.meta.url).pathname
+      "@/": new URL("./src/", import.meta.url).pathname,
     },
-  },
-  css: {
-    postcss: {
-      from: resolve(__dirname, 'postcss.config.js'),
-      to: resolve(__dirname, 'dist/style.css'),
-
-    }
   },
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'vueComponents',
-      fileName: 'vue-components'
+      entry: resolve(__dirname, "src/index.ts"),
+      name: "vueComponents",
+      fileName: "vue-components",
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ["vue"],
       output: {
         globals: {
-          vue: 'Vue',
+          vue: "Vue",
         },
       },
     },
-  }
-})
+  },
+});
