@@ -22,12 +22,14 @@
   },
   "packageManager": "pnpm@8.14.1",
   "scripts": {
-    "build": "vue-tsc && vite build && pnpm run build:css",
+    "build": "vue-tsc && vite build",
     "build:css": "tailwindcss -o dist/styles.css --minify",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@formkit/icons": "^1.5.9",
+    "@formkit/vue": "^1.5.9",
     "vue": "^3.4.15"
   },
   "devDependencies": {

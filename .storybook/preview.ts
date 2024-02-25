@@ -1,5 +1,11 @@
-import type { Preview } from "@storybook/vue3";
-import '@/style.css'
+import { Preview, setup } from "@storybook/vue3";
+import {plugin, defaultConfig} from '@formkit/vue'
+import config from '@/formkit.config.ts'
+import '@/tailwind.css'
+
+setup((app) => {
+  app.use(plugin, defaultConfig(config))
+})
 
 const preview: Preview = {
   parameters: {
