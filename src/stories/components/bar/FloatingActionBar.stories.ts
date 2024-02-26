@@ -29,7 +29,7 @@ export const Example: Story = {
     setup() {
       return { args };
     },
-    template: `<FloatingActionBarVue class="absolute bottom-20" v-bind="args" />`,
+    template: `<FloatingActionBarVue class="absolute bottom-20 z-10" v-bind="args" />`,
   }),
   args: {
     items: [
