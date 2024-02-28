@@ -28,6 +28,8 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@formkit/addons": "^1.5.9",
+    "@formkit/core": "^1.5.9",
     "@formkit/icons": "^1.5.9",
     "@formkit/vue": "^1.5.9",
     "vue": "^3.4.15"

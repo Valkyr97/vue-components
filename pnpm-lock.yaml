@@ -103,6 +103,12 @@ overrides:
   jackspeak: 2.1.1
 
 dependencies:
+  '@formkit/addons':
+    specifier: ^1.5.9
+    version: 1.5.9
+  '@formkit/core':
+    specifier: ^1.5.9
+    version: 1.5.9
   '@formkit/icons':
     specifier: ^1.5.9
     version: 1.5.9
@@ -1911,6 +1917,19 @@ packages:
   /@floating-ui/utils@0.2.1:
     resolution: {integrity: sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==}
     dev: true
+
+  /@formkit/addons@1.5.9:
+    resolution: {integrity: sha512-YchMmYhZHkdj1F1qTSpB+AErq0imIjB1VmsRtaPHYpbk3ucGWUqmsEBDU/Xy+zP4lTrHlPLWm2Oz1mLfPWiwTA==}
+    dependencies:
+      '@formkit/auto-animate': 0.8.1
+      '@formkit/core': 1.5.9
+      '@formkit/inputs': 1.5.9
+      '@formkit/utils': 1.5.9
+    dev: false
+
+  /@formkit/auto-animate@0.8.1:
+    resolution: {integrity: sha512-0/Z2cuNXWVVIG/l0SpcHAWFhGdvLJ8DRvEfRWvmojtmRWfEy+LWNwgDazbZqY0qQYtkHcoEK3jBLkhiZaB/4Ig==}
+    dev: false
 
   /@formkit/core@1.5.9:
     resolution: {integrity: sha512-hkF2uwmXcyeGqrYAO1RN3me77NdRWhuH4pZP+A2xlGZqBLx98nvABYUfTiQsCmdnPv9RkGHHB7qTq9BOvFATHQ==}
