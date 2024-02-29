@@ -177,6 +177,9 @@ devDependencies:
   vite-plugin-dts:
     specifier: ^3.7.2
     version: 3.7.2(typescript@5.3.3)(vite@5.1.2)
+  vue-component-type-helpers:
+    specifier: ^1.8.27
+    version: 1.8.27
   vue-tsc:
     specifier: ^1.8.27
     version: 1.8.27(typescript@5.3.3)

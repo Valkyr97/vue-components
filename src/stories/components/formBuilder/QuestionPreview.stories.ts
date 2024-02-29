@@ -1,9 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/vue3";
-import QuestionPreview from "@/components/dynamicForm/QuestionPreview.vue";
-import { getInputType } from "@/helpers/formHelpers";
 import { ref } from "vue";
+import type { Meta, StoryObj } from "@storybook/vue3";
+import { ComponentProps } from "vue-component-type-helpers";
+import { getInputType } from "@/helpers/formHelpers";
+import QuestionPreview from "@/components/dynamicForm/QuestionPreview.vue";
 
-const meta = {
+type QuestionPreviewPropsAndCustomArgs = ComponentProps<
+  typeof QuestionPreview
+> & {
+  type?: string;
+};
+
+const meta: Meta<QuestionPreviewPropsAndCustomArgs> = {
   title: "Form Builder/Question Preview",
   component: QuestionPreview,
   argTypes: {
@@ -39,9 +46,9 @@ const meta = {
       template: `<QuestionPreview v-bind='args' v-model:question='questionType'  />`,
     };
   },
-} satisfies Meta<typeof QuestionPreview>;
+};
 
 export default meta;
-type Story = StoryObj<typeof QuestionPreview>;
+type Story = StoryObj<QuestionPreviewPropsAndCustomArgs>;
 
 export const Default: Story = {};

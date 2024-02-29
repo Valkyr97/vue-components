@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import QuestionExample from "@/components/example/QuestionExample.vue";
 import { InputType } from "@/enums/InputType";
 
-const meta = {
+const meta: Meta<typeof QuestionExample> = {
   title: "Form Builder/Question Preview Example",
   component: QuestionExample,
   parameters: {
@@ -17,6 +17,11 @@ type Story = StoryObj<typeof QuestionExample>;
 export const Radio: Story = {
   render: (args: any) => ({
     components: { QuestionExample },
+    parameters: {
+      controls: {
+        exclude: ["questionType", "placeholder"],
+      },
+    },
     setup() {
       return { args };
     },
@@ -25,7 +30,6 @@ export const Radio: Story = {
       `,
   }),
   args: {
-    placeholder: "Short Text Answer",
     questionType: {
       [InputType.SELECT]: {
         type: "radio",

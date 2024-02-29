@@ -7,18 +7,18 @@ import { QuestionType } from "@/types/IForms";
 const props = defineProps<{
   placeholder?: string;
   questionType: QuestionType;
+  selected: boolean
 }>();
 
 //State
 const question = ref<QuestionType>(props.questionType);
 
-const isSelected = ref(false);
 const title = ref("");
 const description = ref("");
 
 </script>
 <template>
-  <InputItemLayout :selected="isSelected">
+  <InputItemLayout :selected="selected">
     <div class="flex flex-col w-full px-6 gap-y-1">
       <FormKit
         type="text"
