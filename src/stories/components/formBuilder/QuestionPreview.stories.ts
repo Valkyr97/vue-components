@@ -1,29 +1,47 @@
-import { ref } from "vue";
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { InputType } from "@/enums/InputType";
-import QuestionExample from "@/components/example/QuestionExample.vue";
+import QuestionPreview from "@/components/dynamicForm/QuestionPreview.vue";
+import { getInputType } from "@/helpers/formHelpers";
+import { ref } from "vue";
 
 const meta = {
   title: "Form Builder/Question Preview",
-  component: QuestionExample,
+  component: QuestionPreview,
+  argTypes: {
+    type: {
+      options: [
+        "radio",
+        "select",
+        "checkbox",
+        "text",
+        "paragraph",
+        "password",
+        "email",
+        "url",
+      ],
+      control: {
+        type: "select",
+      },
+    },
+  },
   parameters: {
     controls: {},
   },
   render: (args: any) => {
-    const type = ref({[InputType.SELECT]: {type: 'radio', questionChoices: []}});
+    const { type } = args;
+
+    const questionType = ref(getInputType(type));
+
     return {
-      components: { QuestionExample },
+      components: { QuestionPreview },
       setup() {
-        return { args, type };
+        return { questionType, args };
       },
-      template: `
-      <QuestionExample v-bind='args' v-model:question='type' />
-      `,
+      template: `<QuestionPreview v-bind='args' v-model:question='questionType'  />`,
     };
   },
-} satisfies Meta<typeof QuestionExample>;
+} satisfies Meta<typeof QuestionPreview>;
 
 export default meta;
-type Story = StoryObj<typeof QuestionExample>;
+type Story = StoryObj<typeof QuestionPreview>;
 
 export const Default: Story = {};

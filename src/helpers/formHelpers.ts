@@ -198,3 +198,26 @@ const defineConditions = (conditions?: FormElementVisibilitySetup) => {
         value: String(rule.value)
     } : []))
 }
+
+export const getInputType = (type: string) => {
+    switch (type) {
+      case "radio":
+        return { [InputType.SELECT]: { type: "radio", questionChoices: [] } };
+      case "select":
+        return { [InputType.SELECT]: { type: "select", questionChoices: [] } };
+      case "checkbox":
+        return { [InputType.SELECT]: { type: "checkbox", questionChoices: [] } };
+      case "text":
+        return { [InputType.TEXT]: {} };
+      case "paragraph":
+        return { [InputType.TEXT]: { paragraph: true } };
+      case "password":
+        return { [InputType.PASSWORD]: {} };
+      case "email":
+        return { [InputType.EMAIL]: {} };
+      case "url":
+        return { [InputType.URL]: {} };
+      default:
+        return { [InputType.TEXT]: {} };
+    }
+  }

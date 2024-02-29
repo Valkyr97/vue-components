@@ -14,7 +14,7 @@ const emits = defineEmits(['close', 'settings']);
 
 const isSettingsActive = ref(false)
 
-const ignoreTargetClass = inject('ignoreTargetOnSectionClickOutside')
+const ignoreTargetClass = inject('ignoreTargetOnSectionClickOutside') || ''
 
 //Actions
 const handleSetupIconClick = () => {

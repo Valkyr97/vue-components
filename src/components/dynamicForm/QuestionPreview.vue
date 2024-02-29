@@ -89,7 +89,7 @@ const midWidthInputs = [
         '$remove:ring-1': questionType === InputType.FILE,
         'border-b-2 border-gray-300': true,
         'border-dashed': questionType === InputType.TEXT,
-        'max-w-md': midWidthInputs.includes(questionType),
+        'max-w-[20em]': midWidthInputs.includes(questionType),
         '!max-w-full':
           questionType === InputType.TEXT && questionData.paragraph,
         '!w-48': questionType === InputType.NUMBER,

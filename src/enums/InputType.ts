@@ -9,4 +9,5 @@ export enum InputType {
   FILE = 'file',
   EMAIL = 'email',
   URL = 'url',
+  PASSWORD = 'password',
 }

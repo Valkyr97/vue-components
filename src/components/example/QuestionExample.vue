@@ -6,10 +6,11 @@ import { QuestionType } from "@/types/IForms";
 
 const props = defineProps<{
   placeholder?: string;
+  questionType: QuestionType;
 }>();
 
 //State
-const question = defineModel<QuestionType>("question");
+const question = ref<QuestionType>(props.questionType);
 
 const isSelected = ref(false);
 const title = ref("");
