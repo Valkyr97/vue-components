@@ -1,24 +1,27 @@
 <script setup lang="ts">
-import InputItemLayout from "@/layout/InputItemLayout.vue";
-import QuestionPreview from "../dynamicForm/QuestionPreview.vue";
-import { ref } from "vue";
-import { QuestionType } from "@/types/IForms";
+import InputItemLayout from '@/layout/InputItemLayout.vue';
+import QuestionPreview from '../dynamicForm/QuestionPreview.vue';
+import { ref } from 'vue';
+import { QuestionType } from '@/types/IForms';
 
-const props = defineProps<{
-  placeholder?: string;
-  questionType: QuestionType;
-  selected: boolean
-}>();
+const props = withDefaults(
+  defineProps<{
+    placeholder?: string;
+    questionType: QuestionType;
+    selected?: boolean;
+    color: string;
+  }>(),
+  { selected: false }
+);
 
 //State
 const question = ref<QuestionType>(props.questionType);
 
-const title = ref("");
-const description = ref("");
-
+const title = ref('');
+const description = ref('');
 </script>
 <template>
-  <InputItemLayout :selected="selected">
+  <InputItemLayout :selected="selected" :main-color="color">
     <div class="flex flex-col w-full px-6 gap-y-1">
       <FormKit
         type="text"
